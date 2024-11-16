@@ -45,7 +45,7 @@ body.light {
     max-width: 90px;
     width: auto;
     border-radius: 50%;
-    margin: auto;
+    
 }
 
 #userProf p {
@@ -71,13 +71,15 @@ body.light {
     left: 0;
     transform: translateY(-50%);
     cursor: pointer;
+    animation: slidout 0.2s ;
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slidin 0.4s forwards ;
 }
-
+#switch button:hover{
+    outline: 5px solid var(--surface-color);
+}
 #switch span {
     display: block;
     width: 64px ;
@@ -108,6 +110,7 @@ ul li a {
     font-weight: bold;
     transition: background 0.5s;
     color: var(--text-color);
+    
 }
 
 ul li a:hover {
@@ -119,4 +122,20 @@ footer {
     padding: 24px 0;
     text-align: center;
     color: var(--text-color);
+}
+@keyframes slidin{
+    from {
+        left: 0;
+    }
+    to{
+         left:50%;
+    }
+}
+@keyframes slidout{
+    trom{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
 }
