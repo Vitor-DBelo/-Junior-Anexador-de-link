@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="light">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="content">
+            <div id="userProf">
+                <div>
+                    <img src="assets/download.jfif" alt="at">
+                </div>
+                <p>@Junior</p>
+            </div>
+
+            <div id="switch" onclick="toggMod()">
+                <button></button>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">TikTok</a></li>
+                <li><a href="#" target="_blank">YouTube</a></li>
+                <li><a href="#" target="_blank">Shopee</a></li>
+                <li><a href="#" target="_blank">Amazon</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Segue aí</p>
+    </footer>
+
+    <script>
+        function toggMod() {
+            const html = document.documentElement;  // Seleciona o elemento <html>
+            html.classList.toggle('light');  // Alterna a classe 'light'
+            document.body.classList.toggle('light');  // Adiciona esta linha para alternar a classe 'light' no body
+        }
+    </script>
+</body>
+</html>

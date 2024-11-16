@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+:root {
+    --text-color: #ffff;
+    --bg-url: url(assets/bg-desktop.jpg);
+    --strok-color: rgba(255,255,255,0.2);
+    --surface-color: rgba(255,255,255,0.3);
+    --swith-bg-url: url(assets/estrella.svg);
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);  /* Garante que o texto tenha a cor certa */
+}
+
+body.light {
+    --text-color: black;  
+    --bg-url: url(assets/bg-desktop-light.jpg); /* Muda a imagem de fundo no modo claro */
+    --strok-color: rgba(0,0,0,0.5); 
+    --surface-color: rgba(0,0,0,0.3); 
+}
+
+#content {
+    width: 360px;
+    margin: auto;
+    margin-top: 56px;
+}
+
+#userProf {
+    display: flex;
+    padding: 24px;
+    text-align: left;
+    align-items: center;
+    gap: 25px;
+    color: var(--text-color);
+}
+
+#userProf img {
+    max-width: 90px;
+    width: auto;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#userProf p {
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--swith-bg-url) no-repeat center;
+    border-radius: 50%;
+    color: var(--text-color);
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px ;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--strok-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+ul {
+    list-style: none;
+    flex-direction: column;
+    padding: 24px 0;
+}
+
+ul li a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 35px;
+    border-radius: 15px;
+    margin-top: 24px;
+    background: var(--strok-color);
+    -webkit-backdrop-filter: blur(4px);
+    font-weight: bold;
+    transition: background 0.5s;
+    color: var(--text-color);
+}
+
+ul li a:hover {
+    background: var(--surface-color);
+    border: 1.5px solid var(--text-color);
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    color: var(--text-color);
+}
